@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id" placeholder="아이디를 입력하세요" value="">
+    <br>
+    <input type="password" id="pass" placeholder="비밀번호를 입력하세요" value="">
+    <br>
+    <button type="button" id="btn">로그인</button>
+</body>
+<script>
+    const userid = "kopo"
+    const password = "1234"
+
+    btn_click = document.getElementById("btn")
+
+    btn_click.addEventListener('click',function(){
+
+        let id_input = document.getElementById("id").value
+        let pass_input = document.getElementById("pass").value
+
+        if(userid == id_input && password == pass_input){
+            console.log("로그인성공")
+        }else{
+            console.log("로그인실패!")
+        }
+    })
+
+    console.log(false & alert("ddd"))
+</script>
+</html>

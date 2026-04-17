@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭 이벤트 연습</title>
+</head>
+<body>
+    <div id="up"></div>
+    <input type="text" id="input" value="">
+    <div id="down"></div>
+    <button id="upbtn">위</button>
+    <button id="downbtn">아래</button>
+
+    <script>
+        const upbtn = document.getElementById("upbtn");
+        const downbtn = document.getElementById("downbtn");
+        
+        const uptext = document.getElementById("up");
+        const downtext = document.getElementById("down");
+
+        const inputbox = document.getElementById("input");
+
+        upbtn.addEventListener('click', function(){
+            uptext.innerHTML = inputbox.value;
+        });
+
+        downbtn.addEventListener('click', function(){
+            downtext.innerHTML = inputbox.value
+        });
+        
+    </script>
+</body>
+</html>

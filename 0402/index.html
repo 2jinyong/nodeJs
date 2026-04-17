@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        $(function(){
+            // for(let i=1; i<101; i++){
+            //     if(i % 10 == 1){
+            //         $("#box").append(`<br>`)
+            //     }
+            //     $("#box").append(`<button>${i}</button>`)
+            // }
+
+
+            // for(let i=1; i<=5; i++){
+            //     let star = "";
+                
+            //     for (let j=1; j<=i; j++){
+            //         star += "*";
+            //     }
+            //     console.log(star);
+            // }
+
+            // for(let i=5; i>=1; i--){
+            //     let star ="";
+            //     for(let j=1; j<=i; j++){
+            //         star += "*" 
+            //     }
+            //     console.log(star)
+            // }
+
+            // for(let i=1; i<=64; i*=2){
+            //     let star = ""
+            //     for(let j=1; j<=i; j++){
+            //         star+="*"
+            //     }
+            //     console.log(star)
+            // }
+
+            // for(let i=5; i>=1; i--){
+            //     let star="";
+            //     for(let j=1; j<=i; j++){
+            //         star+=" ";
+            //     }
+            //     for(let k=5; k>=i; k--){
+            //         star+="*"
+            //     }
+            //     console.log(star)
+            // }
+
+            arr1=[];
+            for(let i=0; i<10; i++){
+                arr1[i] = i+2
+            }
+            console.log(arr1)
+
+            arr2=[];
+            for(let i=0; i<11; i++){
+                arr2[i] = i * 2
+            }
+            console.log(arr2)
+            
+            arr3=[];
+            for(let i=0; i<7; i++){
+                arr3[i] = `abc${i+1}`;
+            }
+            console.log(arr3)
+
+            arr4=[];
+            intVal = 1
+            for(let i=0; i<10; i++){
+                arr4[i] = intVal
+                intVal += 3
+            }
+            console.log(arr4)
+        })
+    </script>
+</body>
+</html>

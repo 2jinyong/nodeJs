@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        $(function(){
+
+            // const start = 120;
+            // const end = 140;
+
+            
+            // for(i=start; i<=end; i++){
+            //     const str = String(i)
+            //     let count =0;
+
+            //     for(j=0; j<str.length; j++){
+                    
+            //         if(str[j]=="3" || str[j]=="6" || str[j]=="9"){
+            //             count+=1;
+            //         }
+            //     }
+
+            //     if(count>0){
+            //         let result = "";
+            //         for(r=0; r<count; r++){
+            //             result+="짝"
+            //         }
+            //         console.log(result)
+            //     }else{
+            //         console.log(i)
+            //     }
+            // }
+
+
+            
+            let arr1 = [];
+            let num = 1;
+
+            for(i=0; i<5; i++){
+                arr1[i]= [];
+                for(j=0; j<5; j++){
+                    arr1[i][j]= num
+                    num++
+                }
+            }
+            console.log(arr1)
+
+            let arr2 = [];
+            let num2 = 1;
+
+            for(i=0; i<5; i++){
+                arr2[i]= [];
+                for(j=0; j<5; j++){
+                    arr2[i][j] = num2
+                    num2+=3
+                }
+
+            }
+            console.log(arr2)
+
+            let arr3 = [];
+            let num3 = 1;
+
+            for(i=0; i<5; i++){
+                arr3[i]= [];
+                for(j=0; j<5; j++){
+                    arr3[i][j] = i*j
+                }
+
+            }
+            console.log(arr3)
+
+            let arr4 = [];
+            
+            let str = "";
+            for(i=0; i<5; i++){
+                
+                arr4[i]= [];
+                for(j=0; j<5; j++){
+                    arr4[i][j] = str +i+j
+                }
+
+            }
+            console.log(arr4)
+
+            
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        textarea,input,button{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/">홈</a></h1>
+
+    <h1>글쓰기</h1>
+    
+    <form action="">
+        <input type="text" placeholder="제목">
+
+        <br>
+
+        <textarea name="" id="" cols="50" rows="5" placeholder="글을 입력하세요"></textarea>
+
+        <br>
+
+        <label for="yes">공개</label>
+        <input type="radio" name="private" value="yes">
+        
+        <label for="no">비공개</label>
+        <input type="radio" name="private" value="no">
+
+        <br>
+
+        <button type="submit">글쓰기</button>
+        <button type="reset">취소</button>
+    </form>
+
+</body>
+</html>

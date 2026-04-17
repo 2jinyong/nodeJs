@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<style>
+    #output{
+        width: 400px;
+        min-height: 200px;
+        
+        border: 1px solid black;
+    }
+    #output:hover{
+        background-color: pink;
+    }
+</style>
+<body>
+
+    <div id="box"></div>
+
+    <button type="button" id="btn">계산하기</button>
+    <button type="button" id="reset">리셋</button>
+
+    <div id="output"></div>
+
+
+    <script>
+        $(function(){
+            //*************** 바닐라 js 버전 *****************
+
+            // box = document.getElementById('box');
+            // output = document.getElementById('output')
+            
+            // for(let a=1; a<4; a++){
+
+            //     for(let b=0; b<5; b++){
+            //         box.innerHTML+=`
+            //         ${b}<input type="radio" name="r${a}" id="">
+            //         `
+            //     }
+            //     box.innerHTML+=`가중치<input type="text" id="input${a}" value=""><br>`
+            // }
+
+            // document.getElementById('btn').addEventListener('click',function(){
+                
+            //     let total = 0;
+            //     for(let q=1; q<4; q++){
+            //         let inputValue = document.getElementById(`input${q}`).value
+            //         let radioArr = document.getElementsByName(`r${q}`);    
+
+            //         for(let i=0; i<radioArr.length; i++){
+                    
+            //             if(radioArr[i].checked==true){
+                            
+            //                 let gob = i * inputValue
+            //                 total += gob;
+            //                 output.innerHTML +=`${i} * ${inputValue} = ${gob} <br>`
+            //                 console.log(gob)
+            //                 break
+            //             }
+            //         }
+                    
+            //     }       
+            //     output.innerHTML += `결과를 모두 더한 값 =  ${total}<br><br>`;
+
+            // })
+
+            // document.getElementById('reset').addEventListener('click',function(){
+            //     output.innerHTML="";
+            // })
+
+
+            // ************ 제이쿼리 버전 ****************
+            
+            box = $('#box');
+            const btn = $('#btn');
+            const reset =$('#reset');
+            let output = $('#output');
+
+            for(let a=1; a<4; a++){
+
+                for(let b=0; b<5; b++){
+                    box.append(`
+                    ${b}<input type="radio" name="r${a}" id="" value="${b}">
+                    `)
+                }
+                box.append(`가중치<input type="text" id="input${a}" value=""><br>`)
+            }
+
+            btn.click(function(){
+                let sum = 0;
+
+                for(let c=1; c<4; c++){
+                    let radioValue = $(`input[name=r${c}]:checked`).val();
+                    let inputValue = $(`#input${c}`).val();
+                    let gob = radioValue * inputValue;
+
+                    sum += gob;
+                    output.append(`${radioValue} * ${inputValue} =  ${gob}<br>`)
+
+                    
+                }
+                output.append(`<br>결과를 모두 더한 값 : ${sum}<br><br>`)
+            })
+            
+            
+            reset.click(function(){
+                output.empty();
+            })
+
+            
+
+        })
+    </script>
+</body>
+</html>

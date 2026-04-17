@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <br>
+    <div id="box2"></div>
+
+    <script>
+        box = document.getElementById("box")
+        box2 = document.getElementById("box2")
+
+        for(i=1; i<101; i++){
+            box.innerHTML +=  i +  " "
+            if(i % 10 == 0){
+                box.innerHTML += "<br>"
+            }
+        }
+
+        let boxstr = "";
+
+        for(i=1; i<101; i++){
+            boxstr +=  i +  " "
+            if(i % 10 == 0){
+                boxstr += "<br>"
+            }
+        }
+        
+        box2.innerHTML = boxstr
+        
+    </script>
+</body>
+</html>
